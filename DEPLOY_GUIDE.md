@@ -30,7 +30,10 @@ git push -u origin main
 ---
 
 ### Step 3: Check the GitHub Actions Workflow
-This project already comes with `.github/workflows/deploy.yml` pre-configured!
+This project already comes with `.github/workflows/deploy.yml` and `package-lock.json` pre-configured!
+The workflow includes an intelligent dependency installer that works with or without a lockfile:
+- If `package-lock.json` is present, it uses `npm ci --legacy-peer-deps`.
+- If missing, it automatically falls back to `npm install --legacy-peer-deps`.
 Whenever you push changes to your `main` branch, GitHub automatically installs dependencies, builds your site, and deploys it in ~45 seconds.
 
 ---

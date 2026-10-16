@@ -197,7 +197,7 @@ git push -u origin main`}</pre>
                 </div>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Save this file inside your repo as <code className="text-amber-400 font-mono bg-slate-950 px-1.5 py-0.5 rounded">.github/workflows/deploy.yml</code>. Whenever you update your projects, GitHub will automatically rebuild and deploy your site in ~45 seconds!
+                Save this file inside your repo as <code className="text-amber-400 font-mono bg-slate-950 px-1.5 py-0.5 rounded">.github/workflows/deploy.yml</code>. Includes automatic fallback installation so it runs smoothly whether or not a lockfile is committed!
               </p>
               <div className="p-3 rounded-xl bg-black/60 border border-slate-800 font-mono text-[11px] text-slate-400 max-h-36 overflow-y-auto">
                 <pre>{workflowYaml}</pre>
